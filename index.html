@@ -1,7 +1,171 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Zhuo Liu</h1>
-<p>liuz_@mail.ustc.edu.cn</p>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>姓名 • 主页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom tweaks */
+    .container { max-width: 980px; }
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    @media (prefers-color-scheme: dark) {
+      .glass { background: rgba(17,24,39,0.55); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen">
+  <header class="py-6 border-b border-gray-200 dark:border-gray-700">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-xl font-semibold">Z</div>
+        <div>
+          <h1 class="text-2xl font-semibold">你的名字</h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400">硕士 • 研究领域 / 学校</p>
+        </div>
+      </div>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="#intro" class="hover:underline">Introduction</a>
+        <a href="#edu" class="hover:underline">Education</a>
+        <a href="#news" class="hover:underline">News</a>
+        <a href="#pubs" class="hover:underline">Publications</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-10 grid gap-10">
+
+    <!-- Introduction -->
+    <section id="intro" class="glass rounded-2xl p-6 shadow">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold mb-2">Introduction</h2>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            你好！我是 <strong>你的名字</strong>，目前攻读硕士学位于 <em>你的学校</em>，研究方向为 <em>你的研究方向（例如：机器学习、计算机视觉、自然语言处理等）</em>。
+            我对 <em>关键兴趣点</em> 感兴趣，并致力于将理论应用到实际问题中。以下是我的简要信息与近期动态。
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a href="#contact" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 text-sm">联系我</a>
+            <a href="#pubs" class="px-4 py-2 rounded-lg bg-gray-800 text-white text-sm">查看论文</a>
+          </div>
+        </div>
+        <div class="w-48">
+          <img src="https://avatars.githubusercontent.com/u/000000?v=4" alt="avatar" class="rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="edu" class="glass rounded-2xl p-6 shadow">
+      <h2 class="text-xl font-semibold mb-4">Education</h2>
+      <ul class="space-y-4">
+        <li class="flex justify-between items-start">
+          <div>
+            <p class="font-medium">硕士 / 你的专业 — <span class="text-gray-500">你的学校</span></p>
+            <p class="text-sm text-gray-500">起止时间：2024 — 2026（示例）</p>
+            <p class="text-sm mt-1">导师：<em>导师姓名</em> &nbsp;•&nbsp; 研究方向：<em>XXX</em></p>
+          </div>
+          <div class="text-sm text-gray-400">GPA: 预留</div>
+        </li>
+
+        <li class="flex justify-between items-start">
+          <div>
+            <p class="font-medium">学士 / 本科专业 — <span class="text-gray-500">本科院校</span></p>
+            <p class="text-sm text-gray-500">起止时间：2019 — 2023（示例）</p>
+            <p class="text-sm mt-1">相关课程：算法、机器学习、线性代数等</p>
+          </div>
+          <div class="text-sm text-gray-400">GPA: 预留</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="glass rounded-2xl p-6 shadow">
+      <h2 class="text-xl font-semibold mb-4">News</h2>
+      <div class="space-y-3">
+        <!-- timeline item -->
+        <div class="flex items-start gap-4">
+          <div class="w-2 h-2 mt-2 rounded-full bg-blue-500"></div>
+          <div>
+            <p class="text-sm font-medium">2025-10-01 &nbsp; • &nbsp; 接受会议/获奖/新项目</p>
+            <p class="text-sm text-gray-500 mt-1">简短描述：例如“我的论文被 xxx 会议接受/获得了 xxx 奖”。</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-2 h-2 mt-2 rounded-full bg-gray-400"></div>
+          <div>
+            <p class="text-sm font-medium">2025-07-15 &nbsp; • &nbsp; 新项目启动</p>
+            <p class="text-sm text-gray-500 mt-1">简短描述：例如“与某实验室合作启动了一个关于 XXX 的研究项目”。</p>
+          </div>
+        </div>
+
+        <!-- add more news items as needed -->
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="pubs" class="glass rounded-2xl p-6 shadow">
+      <h2 class="text-xl font-semibold mb-4">Publications</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- pub item -->
+        <article class="p-4 border border-gray-100 dark:border-gray-800 rounded-lg">
+          <h3 class="font-medium">论文标题：示例论文1</h3>
+          <p class="text-sm text-gray-500 mt-1">作者列表，会议/期刊名，年份</p>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="text-sm underline">PDF</a>
+            <a href="#" class="text-sm underline">代码</a>
+            <a href="#" class="text-sm underline">补充材料</a>
+          </div>
+        </article>
+
+        <article class="p-4 border border-gray-100 dark:border-gray-800 rounded-lg">
+          <h3 class="font-medium">论文标题：示例论文2</h3>
+          <p class="text-sm text-gray-500 mt-1">作者列表，会议/期刊名，年份</p>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="text-sm underline">PDF</a>
+            <a href="#" class="text-sm underline">代码</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-4">注：可以把此处替换为 BibTeX 列表或自动生成的 publication feed。</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="glass rounded-2xl p-6 shadow">
+      <h2 class="text-xl font-semibold mb-4">联系方式</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-sm">邮箱： <a href="mailto:yourname@university.edu" class="underline">yourname@university.edu</a></p>
+          <p class="text-sm mt-2">GitHub： <a href="https://github.com/yourusername" class="underline">@yourusername</a></p>
+          <p class="text-sm mt-2">个人网站/简历： <a href="#" class="underline">下载简历</a></p>
+        </div>
+        <div>
+          <p class="text-sm">社交：</p>
+          <ul class="mt-2 space-y-1 text-sm text-gray-500">
+            <li>LinkedIn: <a href="#" class="underline">your-linkedin</a></li>
+            <li>Twitter/X: <a href="#" class="underline">@yourhandle</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <input class="p-3 rounded-lg border border-gray-200 dark:border-gray-700" placeholder="你的名字" />
+          <input class="p-3 rounded-lg border border-gray-200 dark:border-gray-700" placeholder="你的邮箱" />
+          <textarea class="p-3 rounded-lg border border-gray-200 dark:border-gray-700 md:col-span-2" rows="4" placeholder="消息"></textarea>
+          <button class="md:col-span-2 px-4 py-2 rounded-lg bg-blue-600 text-white">发送</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-6 text-center text-sm text-gray-500 border-t border-gray-100 dark:border-gray-800">
+    © 2025 你的名字 • <a href="https://github.com/yourusername" class="underline">GitHub</a>
+  </footer>
+
 </body>
 </html>
